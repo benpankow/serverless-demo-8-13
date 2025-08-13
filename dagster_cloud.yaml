@@ -1,0 +1,4 @@
+locations:
+- code_source:
+    package_name: dagster_analytics
+  location_name: dagster-analytics
