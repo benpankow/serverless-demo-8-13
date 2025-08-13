@@ -1,7 +1,7 @@
 from setuptools import find_packages, setup
 
 setup(
-    name="dagster-analytics",
+    name="dagster-analytics-dependency",
     packages=find_packages(exclude=["tests"]),
     install_requires=[
         "dagster",
@@ -13,6 +13,5 @@ setup(
         "pandas",
         "pyarrow",
         "simple-salesforce",
-        "dagster-analytics-dependency",
     ],
 )
