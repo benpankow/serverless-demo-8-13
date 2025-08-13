@@ -1,0 +1,13 @@
+Metadata-Version: 2.4
+Name: dagster-analytics
+Version: 0.0.0
+Requires-Dist: dagster
+Requires-Dist: dagster-cloud
+Requires-Dist: dagster-dbt
+Requires-Dist: dagster-snowflake
+Requires-Dist: dbt-snowflake
+Requires-Dist: boto3
+Requires-Dist: pandas
+Requires-Dist: pyarrow
+Requires-Dist: simple-salesforce
+Dynamic: requires-dist

@@ -1,0 +1,9 @@
+dagster
+dagster-cloud
+dagster-dbt
+dagster-snowflake
+dbt-snowflake
+boto3
+pandas
+pyarrow
+simple-salesforce
