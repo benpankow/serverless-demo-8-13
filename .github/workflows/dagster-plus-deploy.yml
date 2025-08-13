@@ -29,7 +29,13 @@ jobs:
       - name: Prerun Checks
         id: prerun
         uses: dagster-io/dagster-cloud-action/actions/utils/prerun@v0.1
-
+      - name: Configure dependency resolution to use the wheel built above
+        run: >
+          mkdir -p $GITHUB_WORKSPACE/deps &&
+          echo "[global]" > $GITHUB_WORKSPACE/deps/pip.conf &&
+          echo "find-links = " >> $GITHUB_WORKSPACE/deps/pip.conf &&
+          echo "    file://$GITHUB_WORKSPACE/deps/" >> $GITHUB_WORKSPACE/deps/pip.conf &&
+          echo "PIP_CONFIG_FILE=$GITHUB_WORKSPACE/deps/pip.conf" > $GITHUB_ENV
       - name: Checkout
         uses: actions/checkout@v3
         with:
